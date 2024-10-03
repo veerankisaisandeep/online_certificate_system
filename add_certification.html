@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Certification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            margin: 50px auto;
+            width: 50%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        input[type="text"], input[type="date"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Add Certification</h2>
+    <form action="submit_certification.php" method="POST" enctype="multipart/form-data">
+        <label for="certName">Certification Name:</label>
+        <input type="text" id="certName" name="certName" required>
+
+        <label for="certAuthority">Issuing Authority:</label>
+        <input type="text" id="certAuthority" name="certAuthority" required>
+
+        <label for="issueDate">Date of Issue:</label>
+        <input type="date" id="issueDate" name="issueDate" required>
+
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="date" id="expiryDate" name="expiryDate" required>
+
+        <label for="certFile">Upload Certificate (PDF):</label>
+        <input type="file" id="certFile" name="certFile" accept=".pdf" required>
+
+        <button type="submit" class="btn">Add Certification</button>
+    </form>
+</div>
+
+</body>
+</html>

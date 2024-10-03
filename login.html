@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Certification Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            margin-top: 100px;
+            background-color: white;
+            width: 400px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            padding: 10px 15px;
+            width: 95%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .role-select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <select id="role" class="role-select">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            <button type="button" class="btn" onclick="login()">Login</button>
+            <p>Don't have an account? <a href="create_account.html">Create Account</a></p>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const role = document.getElementById("role").value;
+
+            // Hardcoded users and passwords
+            const users = {
+                "admin": { password: "admin123", role: "admin" },
+                "user1": { password: "userpass1", role: "user" },
+                "user2": { password: "userpass2", role: "user" },
+                "user3": { password: "userpass3", role: "user" }
+            };
+
+            if (users[username] && users[username].password === password && users[username].role === role) {
+                if (role === "admin") {
+                    window.location.href = "admin_dashboard.html";
+                } else {
+                    window.location.href = "user_dashboard.html";
+                }
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding-top: 30px;
+            position: fixed;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+            width: 100%;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <a href="admin_dashboard.html">Dashboard</a>
+        <a href="admin_users.html">Users</a>
+        <a href="admin_queries.html">Queries</a>
+        <a href="login.html">Logout</a>
+    </div>
+
+    <div class="content">
+        <h2>Welcome, Admin</h2>
+        <p>Manage users, their certifications, and view queries submitted by users.</p>
+    </div>
+
+</body>
+</html>

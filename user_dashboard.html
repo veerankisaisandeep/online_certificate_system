@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding-top: 30px;
+            position: fixed;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+            width: 100%;
+        }
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .certification-card {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .valid { background-color: #4CAF50; color: white; }
+        .expired { background-color: #f44336; color: white; }
+        .about-to-expire { background-color: #ff9800; color: white; }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <a href="profile.html">Profile</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Logout</a>
+    </div>
+
+    <div class="content">
+        <h2>Welcome, User</h2>
+        <div class="certification-grid">
+            <div class="certification-card valid">
+                <h3>Certification 1</h3>
+                <p>Issuer: ABC</p>
+                <p>Status: Valid</p>
+                <button class="btn">View</button>
+                <button class="btn">Edit</button>
+                <button class="btn">Delete</button>
+                <button class="btn">Reupload</button>
+                <button class="btn">Download</button>
+            </div>
+            <div class="certification-card expired">
+                <h3>Certification 2</h3>
+                <p>Issuer: XYZ</p>
+                <p>Status: Expired</p>
+                <button class="btn">View</button>
+                <button class="btn">Edit</button>
+                <button class="btn">Delete</button>
+                <button class="btn">Reupload</button>
+                <button class="btn">Download</button>
+            </div>
+            <div class="certification-card about-to-expire">
+                <h3>Certification 3</h3>
+                <p>Issuer: DEF</p>
+                <p>Status: About to Expire</p>
+                <button class="btn">View</button>
+                <button class="btn">Edit</button>
+                <button class="btn">Delete</button>
+                <button class="btn">Reupload</button>
+                <button class="btn">Download</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
